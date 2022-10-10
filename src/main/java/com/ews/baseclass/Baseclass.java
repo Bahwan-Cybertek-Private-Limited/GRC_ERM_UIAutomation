@@ -42,6 +42,9 @@ public class Baseclass extends ExtentReportListner{
 	{
 		try {			
 			if(browserName.equals("chrome")){
+				
+				killProcessor();
+				
 				//WebDriver driver1;
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
 				driver = new ChromeDriver(); 
@@ -58,6 +61,18 @@ public class Baseclass extends ExtentReportListner{
 		}
 		
 	}	
+	
+	public void killProcessor()	{
+		try	{
+			Thread.sleep(2000);
+			
+			Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+			Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
+		}
+		catch(Exception ex) {
+			
+		}
+	}
 	
 	public void closeBrower()
 	{
