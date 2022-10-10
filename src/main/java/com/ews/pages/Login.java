@@ -68,7 +68,14 @@ public class Login extends Baseclass{
 			
 		}
 		catch(Exception ex) {
-			
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -125,8 +132,15 @@ public class Login extends Baseclass{
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "Successfully logout");
 		}
-		catch(Exception e) {
-			test.log(LogStatus.FAIL, "Not logout");
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 }

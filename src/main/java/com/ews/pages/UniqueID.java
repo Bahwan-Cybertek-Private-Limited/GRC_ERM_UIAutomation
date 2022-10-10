@@ -53,8 +53,14 @@ public class UniqueID extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -86,7 +92,14 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
