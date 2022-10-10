@@ -32,7 +32,22 @@ public class Rerun extends Baseclass	{
 		  
 	  }		
 	  
-	  
+	  @Test(priority = 2)
+		public void logging()
+		{
+			//launch browser
+			browser_lunch("chrome");
+					
+			Login loginpage = new Login();
+			loginpage.login();
+			
+			//logout
+			loginpage.logout();
+			
+			//close application and browser..
+			closeBrower();
+		}
+		
 		  
 	  
 }

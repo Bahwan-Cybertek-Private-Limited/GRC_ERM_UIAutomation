@@ -43,7 +43,7 @@ public class Baseclass extends ExtentReportListner{
 		try {			
 			if(browserName.equals("chrome")){
 				
-				killProcessor();
+				//killProcessor();
 				
 				//WebDriver driver1;
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
@@ -75,7 +75,7 @@ public class Baseclass extends ExtentReportListner{
 			Thread.sleep(2000);
 			
 			Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
-			Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
+			//Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
 		}
 		catch(Exception ex) {
 			
@@ -87,6 +87,7 @@ public class Baseclass extends ExtentReportListner{
 		try {
 			driver.close();
 			driver.quit();
+			
 		}
 		catch(Exception ex) {
 			System.out.println(ex);
@@ -216,9 +217,10 @@ public class Baseclass extends ExtentReportListner{
 			destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
+			test.log(LogStatus.PASS,"Screen " + source );
 		}
 		catch(Exception ex) {
-			
+			//test.log(LogStatus.FAIL,"Screen " + source );
 		}
 		
 		return destination;
@@ -237,9 +239,10 @@ public class Baseclass extends ExtentReportListner{
 			destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
+			test.log(LogStatus.PASS,"Screen " + source );
 		}
 		catch(Exception ex) {
-			
+			//test.log(LogStatus.FAIL,"Screen " + source );
 		}
 		
 		return destination;
