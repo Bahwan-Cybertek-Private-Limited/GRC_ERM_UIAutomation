@@ -49,6 +49,7 @@ public class Baseclass extends ExtentReportListner{
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
 				driver = new ChromeDriver(); 
 				driver.manage().window().maximize();
+				takeScreenhot(driver, "browser launch");
 			}
 			else if(browserName.equals("Firefox")){
 				//WebDriver driver;
@@ -104,7 +105,7 @@ public class Baseclass extends ExtentReportListner{
 			driver.get(url);
 			test.log(LogStatus.INFO,"Url launched :: " + url);
 			Thread.sleep(2000);
-
+			takeScreenhot(driver, "launch url");
 			
 			
 			//zoomOut();
@@ -205,6 +206,27 @@ public class Baseclass extends ExtentReportListner{
 	
 	
 	public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+		String destination="";
+		try	{
+			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			
+			//after execution, you could see a folder "FailedTestsScreenshots" under src folder
+			destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+			File finalDestination = new File(destination);
+			FileUtils.copyFile(source, finalDestination);
+		}
+		catch(Exception ex) {
+			
+		}
+		
+		return destination;
+		
+	}
+	
+	
+	public static String takeScreenhot(WebDriver driver, String screenshotName) throws Exception {
 		String destination="";
 		try	{
 			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());

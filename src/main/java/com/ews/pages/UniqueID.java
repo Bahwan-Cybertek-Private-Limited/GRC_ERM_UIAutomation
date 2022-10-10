@@ -70,6 +70,7 @@ public class UniqueID extends Baseclass {
 			
 			navigate_UniqueIDtab();
 			
+			takeScreenhot(driver, "Unique id");
 			if(ispresent(Tile_Risk))	{
 				test.log(LogStatus.PASS, "RiskTile is displayed");
 			}

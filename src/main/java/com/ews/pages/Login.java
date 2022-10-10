@@ -61,9 +61,11 @@ public class Login extends Baseclass{
 			
 			if(appTitle.equalsIgnoreCase(actualTitle)) {
 				test.log(LogStatus.PASS, "Application title is : "+actualTitle);
+				takeScreenhot(driver, "login");
 			}
 			else {
 				test.log(LogStatus.FAIL, "Application title is : "+actualTitle);
+				takeScreenhot(driver, "login");
 			}
 			
 		}
@@ -131,6 +133,8 @@ public class Login extends Baseclass{
 			clickOn(btn_logout, "Logout button");		
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "Successfully logout");
+			
+			takeScreenhot(driver, "logout");
 		}
 		catch(Exception ex) {
 			System.out.println(ex);
