@@ -54,7 +54,7 @@ public class UniqueID extends Baseclass {
 			Thread.sleep(4000);
 		}
 		catch(Exception ex) {
-			System.out.println(ex);
+			test.log(LogStatus.INFO,ex.toString());
 			try {
 				getScreenhot(driver, "Exception");
 			} catch (Exception e) {
@@ -93,7 +93,7 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			System.out.println(ex);
+			test.log(LogStatus.INFO,ex.toString());
 			try {
 				getScreenhot(driver, "Exception");
 			} catch (Exception e) {
@@ -119,7 +119,14 @@ public class UniqueID extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -138,7 +145,14 @@ public class UniqueID extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -156,7 +170,14 @@ public class UniqueID extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -177,6 +198,7 @@ public class UniqueID extends Baseclass {
 				test.log(LogStatus.FAIL, "create unique id is not displayed");
 			}
 			
+			Thread.sleep(2000);
 			if(ispresent(btn_ExportAs)) {
 				test.log(LogStatus.PASS, "Export as is displayed");
 			}
@@ -194,7 +216,14 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -268,7 +297,14 @@ public class UniqueID extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -334,7 +370,14 @@ public class UniqueID extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -349,7 +392,14 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -365,7 +415,14 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -388,7 +445,14 @@ public class UniqueID extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -403,7 +467,14 @@ public class UniqueID extends Baseclass {
 			unique_View();
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -417,7 +488,14 @@ public class UniqueID extends Baseclass {
 			unique_Edit();
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -432,7 +510,14 @@ public class UniqueID extends Baseclass {
 			unique_Cancel();
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	

@@ -51,6 +51,7 @@ public class ControlLibrary extends Baseclass{
 				test.log(LogStatus.FAIL, "control library text is not displayed");
 			}
 			
+			Thread.sleep(2000);
 			if(ispresent(btn_Exportas)) {
 				test.log(LogStatus.PASS, "ExportAs button is displayed");
 			}
@@ -75,7 +76,14 @@ public class ControlLibrary extends Baseclass{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 }

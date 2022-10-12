@@ -165,8 +165,15 @@ public class RiskMonitoring extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -174,17 +181,17 @@ public class RiskMonitoring extends Baseclass	{
 	public void UIValidations_CreateRiskKRI()	{
 		try	{
 			if(ispresent(lbl_KeyRiskIndicators))	{
-				test.log(LogStatus.PASS, "RiskAssesment is displayed");
+				test.log(LogStatus.PASS, "keyRiskINdicators is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskAssesment is not displayed");
+				test.log(LogStatus.FAIL, "keyRiskINdicators is not displayed");
 			}
 			
 			if(ispresent(btn_CreateKRI))	{
-				test.log(LogStatus.PASS, "ExportAs button is displayed");
+				test.log(LogStatus.PASS, "CreateKRI button is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "ExportAs button is not displayed");
+				test.log(LogStatus.FAIL, "CreateKRI button is not displayed");
 			}
 			
 			List<WebElement> gridcount = driver.findElements(By.xpath("//kendo-grid-list[@role='presentation']//tbody/tr"));
@@ -197,8 +204,15 @@ public class RiskMonitoring extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -250,7 +264,14 @@ public class RiskMonitoring extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -270,8 +291,15 @@ public class RiskMonitoring extends Baseclass	{
 				test.log(LogStatus.FAIL, "CreateKRI page is not displayed");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -353,7 +381,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -382,7 +417,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -413,7 +455,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -440,7 +489,7 @@ public class RiskMonitoring extends Baseclass	{
 						Thread.sleep(2000);
 					}
 					else {
-						test.log(LogStatus.FAIL, "RISK EDIT page is not displayed");
+						test.log(LogStatus.FAIL, "RISK KRIName is not displayed");
 					}				
 					
 				}
@@ -453,7 +502,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -486,7 +542,14 @@ public class RiskMonitoring extends Baseclass	{
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -587,7 +650,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -623,7 +693,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -697,7 +774,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -783,7 +867,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -819,7 +910,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -863,7 +961,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -915,7 +1020,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -951,7 +1063,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -988,7 +1107,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1031,7 +1157,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1067,7 +1200,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1102,7 +1242,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1133,7 +1280,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1151,7 +1305,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1180,7 +1341,14 @@ public class RiskMonitoring extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1202,8 +1370,15 @@ public class RiskMonitoring extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1229,8 +1404,15 @@ public class RiskMonitoring extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1326,8 +1508,15 @@ public class RiskMonitoring extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1348,8 +1537,15 @@ public class RiskMonitoring extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -1372,6 +1568,7 @@ public class RiskMonitoring extends Baseclass	{
 						test.log(LogStatus.FAIL, "KeyRiskIndicators is not displayed");
 					}
 					
+					Thread.sleep(2000);
 					if(ispresent(btn_ExportAs)) {
 						test.log(LogStatus.PASS, "ExportAs button is displayed");
 					}
@@ -1385,7 +1582,14 @@ public class RiskMonitoring extends Baseclass	{
 				}
 			}
 			catch(Exception ex) {
-				
+				test.log(LogStatus.INFO,ex.toString());
+				try {
+					getScreenhot(driver, "Exception");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					test.log(LogStatus.FAIL,e.toString());
+				}
 			}
 		}
 		
@@ -1418,6 +1622,7 @@ public class RiskMonitoring extends Baseclass	{
 						test.log(LogStatus.FAIL, "KeyRiskIndicators is not displayed");
 					}
 					
+					Thread.sleep(2000);
 					if(ispresent(btn_ExportAs)) {
 						test.log(LogStatus.PASS, "ExportAs button is displayed");
 					}
@@ -1431,7 +1636,14 @@ public class RiskMonitoring extends Baseclass	{
 				}
 			}
 			catch(Exception ex) {
-				
+				test.log(LogStatus.INFO,ex.toString());
+				try {
+					getScreenhot(driver, "Exception");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					test.log(LogStatus.FAIL,e.toString());
+				}
 			}
 		}
 		

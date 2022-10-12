@@ -126,8 +126,15 @@ public class RiskAssesment extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -141,6 +148,7 @@ public class RiskAssesment extends Baseclass	{
 				test.log(LogStatus.FAIL, "RiskAssesment is not displayed");
 			}
 			
+			Thread.sleep(2000);
 			if(ispresent(btn_ExportAs))	{
 				test.log(LogStatus.PASS, "ExportAs button is displayed");
 			}
@@ -158,8 +166,15 @@ public class RiskAssesment extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -185,7 +200,14 @@ public class RiskAssesment extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -298,8 +320,15 @@ public class RiskAssesment extends Baseclass	{
 				test.log(LogStatus.FAIL, "RiskAssesment is not displayed");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -319,7 +348,14 @@ public class RiskAssesment extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -343,45 +379,45 @@ public class RiskAssesment extends Baseclass	{
 						Thread.sleep(2000);
 						
 						if(ispresent(popup_txt_DocumentExmained))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "DocumentExamained popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "DocumentExamained popup is not displayed");
 						}
 						
 						if(ispresent(popup_drp_DesignEffectiveness))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "DesignEffectiveness popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "DesignEffectiveness popup is not displayed");
 						}
 						
 						if(ispresent(popup_drp_ControlEffectiveness))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "ControlEffectiveness popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "ControlEffectiveness popup is not displayed");
 						}
 						
 						if(ispresent(popup_txt_Reason))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "Reason popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "Reason popup is not displayed");
 						}
 						
 						if(ispresent(popup_Save))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "Save popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "Save popup is not displayed");
 						}
 						
 						if(ispresent(popup_Close))	{
-							test.log(LogStatus.PASS, "ControlAssesment popup is displayed");
+							test.log(LogStatus.PASS, "Close popup is displayed");
 						}
 						else {
-							test.log(LogStatus.FAIL, "ControlAssesment popup is not displayed");
+							test.log(LogStatus.FAIL, "Close popup is not displayed");
 						}
 						
 						Thread.sleep(3000);
@@ -399,7 +435,14 @@ public class RiskAssesment extends Baseclass	{
 			}			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -502,7 +545,14 @@ public class RiskAssesment extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -536,7 +586,14 @@ public class RiskAssesment extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -560,8 +617,15 @@ public class RiskAssesment extends Baseclass	{
 				test.log(LogStatus.FAIL, "NextAssesementSubmit is not displayed");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -627,7 +691,14 @@ public class RiskAssesment extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -654,7 +725,14 @@ public class RiskAssesment extends Baseclass	{
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -675,8 +753,15 @@ public class RiskAssesment extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -690,6 +775,7 @@ public class RiskAssesment extends Baseclass	{
 				test.log(LogStatus.FAIL, "RiskAssement submission is not displayed");
 			}
 			
+			Thread.sleep(2000);
 			if(ispresent(btn_ExportAs))	{
 				test.log(LogStatus.PASS, "ExportAs button is displayed");
 			}
@@ -707,8 +793,15 @@ public class RiskAssesment extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -735,7 +828,14 @@ public class RiskAssesment extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -820,8 +920,15 @@ public class RiskAssesment extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -832,7 +939,14 @@ public class RiskAssesment extends Baseclass	{
 			approve_riskAssesmentView();
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -853,8 +967,15 @@ public class RiskAssesment extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	} 
 	
@@ -880,7 +1001,14 @@ public class RiskAssesment extends Baseclass	{
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -983,7 +1111,14 @@ public class RiskAssesment extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	

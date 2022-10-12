@@ -78,7 +78,14 @@ public class Baseclass extends ExtentReportListner{
 			//Runtime.getRuntime().exec("taskkill /F /IM chrome.exe /T");
 		}
 		catch(Exception ex) {
-			
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -110,8 +117,15 @@ public class Baseclass extends ExtentReportListner{
 			
 			
 			//zoomOut();
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL,"Cant  able to launch url :: " + url + "\n\n" + " ERROR MESSAGE :: " + e.toString());
+		} catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -122,8 +136,15 @@ public class Baseclass extends ExtentReportListner{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath(locator)).sendKeys(value);
 			test.log(LogStatus.PASS,"Typed " + value );
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL,"Cant able to type " + value + "in "+refKey+ "\n\n" + "ERROR MESSAGE " + e.toString());
+		} catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -132,8 +153,15 @@ public class Baseclass extends ExtentReportListner{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath(locator)).clear();	
 			test.log(LogStatus.PASS,"Clear field");
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL,"Error in clearing field " + refKey + "\n\n" + "ERROR MESSAGE " + e.toString());
+		} catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -142,8 +170,15 @@ public class Baseclass extends ExtentReportListner{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath(locator)).click();	
 			test.log(LogStatus.PASS,"Clicked on " + refKey);
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL,"Cant able to click on " + refKey + "\n\n" + "ERROR MESSAGE :: " + e.toString());
+		} catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -190,8 +225,15 @@ public class Baseclass extends ExtentReportListner{
 	public void waitSeconds(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
-		} catch (Exception e) {
-
+		}catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -200,8 +242,15 @@ public class Baseclass extends ExtentReportListner{
 			driver.navigate().refresh();
 			Thread.sleep(3000);
 		}
-		catch(Exception e) {
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -220,7 +269,14 @@ public class Baseclass extends ExtentReportListner{
 			test.log(LogStatus.PASS,"Screen " + source );
 		}
 		catch(Exception ex) {
-			//test.log(LogStatus.FAIL,"Screen " + source );
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 		
 		return destination;
@@ -242,7 +298,14 @@ public class Baseclass extends ExtentReportListner{
 			test.log(LogStatus.PASS,"Screen " + source );
 		}
 		catch(Exception ex) {
-			//test.log(LogStatus.FAIL,"Screen " + source );
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 		
 		return destination;
@@ -268,8 +331,15 @@ public class Baseclass extends ExtentReportListner{
 			}
 			
 		}
-		catch(Exception e) {
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 		
 		return value;
@@ -293,8 +363,15 @@ public Boolean isDisabled(String locator) {
 			}
 			
 		}
-		catch(Exception e) {
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 		
 		return value;
@@ -311,7 +388,14 @@ public Boolean isDisabled(String locator) {
 			
 		}
 		catch(Exception ex) {
-			
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -321,8 +405,15 @@ public Boolean isDisabled(String locator) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("document.body.style.zoom='100%'");
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -334,8 +425,15 @@ public Boolean isDisabled(String locator) {
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("document.body.style.zoom='90%'");
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -355,8 +453,15 @@ public Boolean isDisabled(String locator) {
 			}
 			
 			test.log(LogStatus.PASS,"Typed " + value );
-		} catch (Exception e) {
-			test.log(LogStatus.FAIL,"Cant able to type " + value + "in "+refKey+ "\n\n" + "ERROR MESSAGE " + e.toString());
+		} catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -371,7 +476,14 @@ public Boolean isDisabled(String locator) {
 			
 		}
 		catch(Exception ex) {
-			
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -393,8 +505,15 @@ public Boolean isDisabled(String locator) {
 			Thread.sleep(2000);
 			alert.accept();
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -405,8 +524,15 @@ public Boolean isDisabled(String locator) {
 			alert.dismiss();
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -417,8 +543,15 @@ public Boolean isDisabled(String locator) {
 
 			alertMessage= driver.switchTo().alert().getText(); // capture alert message
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			System.out.println(ex);
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 		
 		return alertMessage;

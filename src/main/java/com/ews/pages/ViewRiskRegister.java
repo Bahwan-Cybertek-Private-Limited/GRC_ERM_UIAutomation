@@ -97,39 +97,47 @@ public class ViewRiskRegister extends Baseclass {
 			
 			viewRiskRegister_UIValidations();
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
 	public void viewRiskRegister_UIValidations()	{
 		try	{
 			if(ispresent(breadcrumb)) {
-				test.log(LogStatus.PASS, "AddToRiskRegister is displayed");
+				test.log(LogStatus.PASS, "breadcrumb is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "AddToRiskRegister is not displayed");
+				test.log(LogStatus.FAIL, "breadcrumb is not displayed");
 			}
 			
+			Thread.sleep(2000);
 			if(ispresent(btn_ExportAs)) {
-				test.log(LogStatus.PASS, "AddToRiskRegister is displayed");
+				test.log(LogStatus.PASS, "Exportas is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "AddToRiskRegister is not displayed");
+				test.log(LogStatus.FAIL, "Exportas is not displayed");
 			}
 			
 			if(ispresent(btn_CreateRiskRegister)) {
-				test.log(LogStatus.PASS, "AddToRiskRegister is displayed");
+				test.log(LogStatus.PASS, "CreateriskRegister is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "AddToRiskRegister is not displayed");
+				test.log(LogStatus.FAIL, "CreateriskRegister is not displayed");
 			}
 			
 			if(ispresent(lbl_RiskRegister)) {
-				test.log(LogStatus.PASS, "AddToRiskRegister is displayed");
+				test.log(LogStatus.PASS, "RiskRegister is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "AddToRiskRegister is not displayed");
+				test.log(LogStatus.FAIL, "RiskRegister is not displayed");
 			}
 			
 			List<WebElement> griddatacount = driver.findElements(By.xpath("//table[@role='presentation']/tbody/tr"));
@@ -149,8 +157,15 @@ public class ViewRiskRegister extends Baseclass {
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -187,8 +202,15 @@ public class ViewRiskRegister extends Baseclass {
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -223,7 +245,14 @@ public class ViewRiskRegister extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -277,7 +306,14 @@ public class ViewRiskRegister extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -310,7 +346,14 @@ public class ViewRiskRegister extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -328,8 +371,15 @@ public class ViewRiskRegister extends Baseclass {
 			clickOn(lnk_ViewRegister,"ViewRegister link");
 			Thread.sleep(2000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -359,7 +409,14 @@ public class ViewRiskRegister extends Baseclass {
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -400,8 +457,15 @@ public class ViewRiskRegister extends Baseclass {
 				test.log(LogStatus.FAIL, "AddRisk is not displayed");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -522,8 +586,15 @@ public class ViewRiskRegister extends Baseclass {
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -577,8 +648,15 @@ public class ViewRiskRegister extends Baseclass {
 				test.log(LogStatus.FAIL, "Editbutton is not Enabled");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -655,7 +733,14 @@ public class ViewRiskRegister extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -691,7 +776,14 @@ public class ViewRiskRegister extends Baseclass {
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -783,7 +875,14 @@ public class ViewRiskRegister extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -840,7 +939,14 @@ public class ViewRiskRegister extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());  
+			}
 		}
 	}
 	

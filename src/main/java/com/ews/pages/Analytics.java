@@ -99,8 +99,15 @@ public class Analytics extends Baseclass{
 			
 		}
 		catch(Exception ex) {
-			
-		}	
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
+		}
 		
 	}
 	
@@ -138,6 +145,7 @@ public class Analytics extends Baseclass{
 					test.log(LogStatus.FAIL, "KeyRiskIndicators is not displayed");
 				}
 				
+				Thread.sleep(2000);
 				if(ispresent(btn_ExportAs)) {
 					test.log(LogStatus.PASS, "ExportAs button is displayed");
 				}
@@ -151,7 +159,14 @@ public class Analytics extends Baseclass{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -183,7 +198,7 @@ public class Analytics extends Baseclass{
 				
 				clickOn(lnk_ToCal,"Todate calender");
 				Thread.sleep(2000);				
-				clickOn(lnk_cal_Today,"select Date from calender");
+				clickOn(lnk_cal_Today,"select Date TO calender");
 				Thread.sleep(2000);
 				
 				//typeIn1(txt_FromDate,"26-06-2022","From date");
@@ -199,6 +214,7 @@ public class Analytics extends Baseclass{
 					test.log(LogStatus.FAIL, "KeyRiskIndicators is not displayed");
 				}
 				
+				Thread.sleep(2000);
 				if(ispresent(btn_ExportAs)) {
 					test.log(LogStatus.PASS, "ExportAs button is displayed");
 				}
@@ -212,7 +228,14 @@ public class Analytics extends Baseclass{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -259,7 +282,14 @@ public class Analytics extends Baseclass{
 				}
 			}
 			catch(Exception ex) {
-				
+				test.log(LogStatus.INFO,ex.toString());
+				try {
+					getScreenhot(driver, "Exception");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					test.log(LogStatus.FAIL,e.toString());
+				}
 			}
 		}
 
@@ -289,6 +319,7 @@ public class Analytics extends Baseclass{
 					JavascriptExecutor js = (JavascriptExecutor) driver;
 				    js.executeScript("window.scrollBy(2000,0)");
 				       
+				    Thread.sleep(2000);
 					if(ispresent(btn_ExportAs)) {
 						test.log(LogStatus.PASS, "ExportAs button is displayed");
 					}
@@ -310,7 +341,14 @@ public class Analytics extends Baseclass{
 				}
 			}
 			catch(Exception ex) {
-				
+				test.log(LogStatus.INFO,ex.toString());
+				try {
+					getScreenhot(driver, "Exception");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					test.log(LogStatus.FAIL,e.toString());
+				}
 			}
 		}
 

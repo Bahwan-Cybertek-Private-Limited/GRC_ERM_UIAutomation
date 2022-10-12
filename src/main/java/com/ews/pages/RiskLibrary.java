@@ -101,7 +101,14 @@ public class RiskLibrary extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -123,7 +130,7 @@ public class RiskLibrary extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRisk,"button RiskLibrary");
+			clickOn(btn_CreateRisk,"create risk button RiskLibrary");
 			Thread.sleep(2000);
 			
 			clickOn(btn_SingleRisk,"button singleRisk");
@@ -137,7 +144,14 @@ public class RiskLibrary extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -156,10 +170,10 @@ public class RiskLibrary extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRisk,"RiskLibrary tab");
+			clickOn(btn_CreateRisk,"create risk RiskLibrary button");
 			Thread.sleep(2000);
 			
-			clickOn(btn_BulkRisk,"RiskLibrary tab");
+			clickOn(btn_BulkRisk,"bulk risk button");
 			Thread.sleep(2000);
 						
 			// verify validation msg's........
@@ -167,7 +181,14 @@ public class RiskLibrary extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -226,7 +247,14 @@ public class RiskLibrary extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -270,7 +298,14 @@ public class RiskLibrary extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -291,31 +326,38 @@ public class RiskLibrary extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRisk,"button RiskLibrary");
+			clickOn(btn_CreateRisk,"button create RiskLibrary");
 			Thread.sleep(2000);
 			
 			clickOn(btn_SingleRisk,"button singleRisk");
 			Thread.sleep(2000);
 			
 			typeIn(txt_RiskName, "test", "RiskName");
+			Thread.sleep(2000);
+			
 			typeIn(txt_Riskdesc, "test desc", "Riskdesc");
+			Thread.sleep(2000);
 			
 			clickOn(drp_RiskType, "Risk Type");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
+			
 			clickOn(drp_RiskEventType, "Risk EventType");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
+			
 			clickOn(drp_Riskcategory, "RiskCategory");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
+			
 			clickOn(drp_RiskPrimarysource, "Primary reason source");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
+			
 			clickOn(drp_RiskSecondarysource, "source");
 			Thread.sleep(2000);
 			keypress_Down();
@@ -327,7 +369,14 @@ public class RiskLibrary extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	

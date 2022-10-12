@@ -13,16 +13,17 @@ import utils.ExtentReportListner;
 public class Rerun extends Baseclass	{
 	
 	
-	  @Test(priority = 39) 
-	  public void unique_uiValidations() { 
+	  
+	  @Test(priority = 22) 
+	  public void register_CreateRiskUIValidations() { 
 		  //launch browser
 		  browser_lunch("chrome");
 		  
 		  Login loginpage = new Login(); 
 		  loginpage.login();
 		  
-		  UniqueID UniqueID = new UniqueID();
-		  UniqueID.ui_Validation_UniqueID();
+		  Register register = new Register();
+		  register.register_CreateRiskRegisterUiValidations();
 		  
 		  //logout 
 		  loginpage.logout();
@@ -30,24 +31,28 @@ public class Rerun extends Baseclass	{
 		  //close application and browser.. 
 		  closeBrower(); 
 		  
-	  }		
+	  }	
 	  
-	  @Test(priority = 2)
-		public void logging()
-		{
-			//launch browser
-			browser_lunch("chrome");
-					
-			Login loginpage = new Login();
-			loginpage.login();
-			
-			//logout
-			loginpage.logout();
-			
-			//close application and browser..
-			closeBrower();
-		}
-		
+	  
+	  @Test(priority = 23) 
+	  public void register_CreateRisk_AddToRiskRegisterUIValidations() { 
+		  //launch browser
+		  browser_lunch("chrome");
+		  
+		  Login loginpage = new Login(); 
+		  loginpage.login();
+		  
+		  Register register = new Register();
+		  register.addToRiskRegister_UiValidations();
+		  
+		  //logout 
+		  loginpage.logout();
+		  
+		  //close application and browser.. 
+		  closeBrower(); 
+		  
+	  }	
+	
 		  
 	  
 }

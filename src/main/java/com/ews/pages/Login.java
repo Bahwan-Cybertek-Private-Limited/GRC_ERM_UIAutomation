@@ -70,7 +70,7 @@ public class Login extends Baseclass{
 			
 		}
 		catch(Exception ex) {
-			System.out.println(ex);
+			test.log(LogStatus.INFO,ex.toString());
 			try {
 				getScreenhot(driver, "Exception");
 			} catch (Exception e) {
@@ -121,7 +121,14 @@ public class Login extends Baseclass{
 					
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -137,7 +144,7 @@ public class Login extends Baseclass{
 			takeScreenhot(driver, "logout");
 		}
 		catch(Exception ex) {
-			System.out.println(ex);
+			test.log(LogStatus.INFO,ex.toString());
 			try {
 				getScreenhot(driver, "Exception");
 			} catch (Exception e) {

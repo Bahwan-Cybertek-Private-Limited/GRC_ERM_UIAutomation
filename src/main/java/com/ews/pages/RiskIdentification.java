@@ -65,40 +65,47 @@ public class RiskIdentification extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(Module_MouseOver,"slide mouseover");
 			Thread.sleep(2000);
-			clickOn(lnk_RiskIdentification,"RiskLibrary tab");
+			clickOn(lnk_RiskIdentification,"RiskIdentification lnk");
 			Thread.sleep(2000);
-			clickOn(lnk_workshop,"RiskLibrary tab");
+			clickOn(lnk_workshop,"workshop lnk");
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 						
 			if(ispresent(lbl_Workshop)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "workshop is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "workshop is not displayed");
 			}
 			
 			if(ispresent(btn_CreateWorkshop)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Create workshop is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Create workshop is not displayed");
 			}
 			
 			
 			List<WebElement> griddatacount = driver.findElements(By.xpath(list_grid));
 			
 			if(griddatacount.size() > 1) {
-				test.log(LogStatus.PASS, "RiskLibrary data is displayed");
+				test.log(LogStatus.PASS, "grid data is displayed");
 			}
 			else {
-				test.log(LogStatus.INFO, "No records found in RiskLibrary grid");
+				test.log(LogStatus.INFO, "No records found in grid");
 			}		
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -114,54 +121,54 @@ public class RiskIdentification extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(Module_MouseOver,"slide mouseover");
 			Thread.sleep(2000);
-			clickOn(lnk_RiskIdentification,"RiskLibrary tab");
+			clickOn(lnk_RiskIdentification,"RiskIdentification lnk");
 			Thread.sleep(2000);
-			clickOn(lnk_workshop,"RiskLibrary tab");
+			clickOn(lnk_workshop,"workshp lnk");
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
 			if(ispresent(table_DateofCreation)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Dateofbirth is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Dateofbirth is not displayed");
 			}
 			
 			if(ispresent(table_Description)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Description is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Description is not displayed");
 			}
 			
 			if(ispresent(table_Status)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Status is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Status is not displayed");
 			}
 			
 			if(ispresent(table_Takeactions)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "TakeAction is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "TakeAction grid is not displayed");
 			}
 			
 			if(ispresent(table_WorkshopID)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Workshop id is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Workshop id is not displayed");
 			}
 			
 			
 			if(ispresent(table_WorkshopName)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Workshop name is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Workshop name is not displayed");
 			}
 			
 			
@@ -169,7 +176,14 @@ public class RiskIdentification extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -181,22 +195,29 @@ public class RiskIdentification extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(Module_MouseOver,"slide mouseover");
 			Thread.sleep(2000);
-			clickOn(lnk_RiskIdentification,"RiskLibrary tab");
+			clickOn(lnk_RiskIdentification,"RiskIdentification lnk");
 			Thread.sleep(2000);
-			clickOn(lnk_workshop,"RiskLibrary tab");
+			clickOn(lnk_workshop,"workshop lnk");
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateWorkshop,"RiskLibrary tab");
+			clickOn(btn_CreateWorkshop,"createworkshop button");
 			Thread.sleep(2000);
 			
 			
-			clickOn(btn_Cancel,"RiskLibrary tab");
+			clickOn(btn_Cancel,"Cancel button");
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -209,62 +230,69 @@ public class RiskIdentification extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(Module_MouseOver,"slide mouseover");
 			Thread.sleep(2000);
-			clickOn(lnk_RiskIdentification,"RiskLibrary tab");
+			clickOn(lnk_RiskIdentification,"RiskIdentification lnk");
 			Thread.sleep(2000);
-			clickOn(lnk_workshop,"RiskLibrary tab");
+			clickOn(lnk_workshop,"workshop lnk");
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
 			if(ispresent(lbl_Workshop)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "workshop is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "workshop is not displayed");
 			}
 			
 			
-			clickOn(btn_CreateWorkshop,"RiskLibrary tab");
+			clickOn(btn_CreateWorkshop,"Createworkshop button");
 			Thread.sleep(2000);
 			
 			
 			if(ispresent(lbl_WorkshopDetails)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "workshop details is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "workshop details is not displayed");
 			}
 			
 			if(ispresent(txt_workshopName)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "workshopname is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "workshopname is not displayed");
 			}
 			
 			if(ispresent(txt_workshopconverName)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "workshopconverName is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "workshopconverName is not displayed");
 			}
 			
 			if(ispresent(txt_Startdate)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Startdate is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Startdate is not displayed");
 			}
 			
 			if(ispresent(txt_Enddate)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Enddate is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Enddate is not displayed");
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -276,7 +304,14 @@ public class RiskIdentification extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 }

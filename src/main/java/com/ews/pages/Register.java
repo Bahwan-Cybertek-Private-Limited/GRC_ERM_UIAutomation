@@ -116,8 +116,15 @@ public class Register extends Baseclass {
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -152,7 +159,14 @@ public class Register extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -206,7 +220,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -236,7 +257,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -257,8 +285,15 @@ public class Register extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -266,36 +301,44 @@ public class Register extends Baseclass {
 	public void fill_RiskRegisterData()	{
 		try	{
 			clickOn(drp_SelectSource,"selectsource");
-
 			Thread.sleep(2000);
-			keypress_Down();
+			keypress_Down();			
+			Thread.sleep(2000);
 			
 			clickOn(drp_DepartmentName,"DepartmentName");
 			Thread.sleep(2000);
+			keypress_Down();
+			Thread.sleep(3000);
+			
 			/*
 			 * List<WebElement> list = driver.findElements(By.
 			 * xpath("//*[@class='k-animation-container k-animation-container-shown']//li//span"
 			 * )); System.out.println(list.size());
 			 * System.out.println(list.get(0).getText());
-			 */
-			keypress_Down();
-			
+			 */			
 			
 			clickOn(drp_WorkshopId,"Workshopid");
+			Thread.sleep(2000);			
+			keypress_Down();			
 			Thread.sleep(2000);
-			
-			
-			keypress_Down();
 			
 			clickOn(drp_Owner,"Owner");
 			Thread.sleep(2000);
-			keypress_Down();
+			keypress_Down();			
+			Thread.sleep(2000);
 			
 			clickOn(btn_ShowRiskLibrary,"ShowRiskLibrary button");
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -336,8 +379,15 @@ public class Register extends Baseclass {
 				test.log(LogStatus.FAIL, "AddRisk is not displayed");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -459,8 +509,15 @@ public class Register extends Baseclass {
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -514,8 +571,15 @@ public class Register extends Baseclass {
 				test.log(LogStatus.FAIL, "Editbutton is not Enabled");
 			}
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -539,8 +603,7 @@ public class Register extends Baseclass {
 			
 			clickOn(tab_Scoring,"scoring tab");
 			Thread.sleep(2000);
-			keypress_Down();		
-			
+						
 			clickOn(btn_Scoring_Edit,"scoring Edit button");
 			Thread.sleep(2000);
 			
@@ -596,7 +659,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -646,7 +716,14 @@ public class Register extends Baseclass {
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -703,7 +780,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 
@@ -769,7 +853,14 @@ public class Register extends Baseclass {
 			}
 		}		
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -792,6 +883,7 @@ public class Register extends Baseclass {
 				clickOn(parties_Responsible, "Parties Responsible");
 				Thread.sleep(2000);
 				keypress_Down();
+				Thread.sleep(2000);
 				
 				clickOn(lnk_FromCal,"Fromdate calender");
 				Thread.sleep(2000);
@@ -806,7 +898,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -822,19 +921,19 @@ public class Register extends Baseclass {
 			String InsuranceDiscard = "//*[contains(text(),'Add Insurance')]/parent::kendo-grid-toolbar//following-sibling::div[@role='grid']/kendo-grid-list//tbody/tr[1]/td[7]/button[contains(text(),'Discard')]";
 			
 			
-			typeIn(Justification, "AddInsurance", "testing");
+			typeIn(Justification, "justification", "justification");
 			Thread.sleep(2000);
 			
-			typeIn(InsuranceCompanyName, "AddInsurance", "testing");
+			typeIn(InsuranceCompanyName, "Insurance", "Insurancecompanyname");
 			Thread.sleep(2000);
 			
-			typeIn(InsuranceNumber, "AddInsurance", "123");
+			typeIn(InsuranceNumber, "123", "InsuranceNumber");
 			Thread.sleep(2000);
 			
-			typeIn(TypeofInsurance, "AddInsurance", "testing");
+			typeIn(TypeofInsurance, "testing", "TypeofInsurance");
 			Thread.sleep(2000);
 			
-			typeIn(SumInsured, "AddInsurance", "testing");
+			typeIn(SumInsured, "testing", "SumInsured");
 			Thread.sleep(2000);
 						
 			clickOn(lnk_FromCal,"Fromdate calender");
@@ -849,7 +948,14 @@ public class Register extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -859,8 +965,7 @@ public class Register extends Baseclass {
 		try	{
 			navigate_ControlRegisterTab();
 			
-			Thread.sleep(2000);
-			
+			Thread.sleep(2000);			
 			if(ispresent(btn_ExportAs))	{
 				successmsg("Export button", "Export button is displayed");
 			}
@@ -879,8 +984,15 @@ public class Register extends Baseclass {
 			
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -900,8 +1012,15 @@ public class Register extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	

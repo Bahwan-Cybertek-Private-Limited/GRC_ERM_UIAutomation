@@ -78,8 +78,15 @@ public class BusinessEntityMapping extends Baseclass	{
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -112,8 +119,15 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -147,10 +161,10 @@ public class BusinessEntityMapping extends Baseclass	{
 				}
 				
 				if(ispresent(btn_Threshold_Cancel))	{
-					test.log(LogStatus.PASS, "save button is displayed");
+					test.log(LogStatus.PASS, "Cancel button is displayed");
 				}
 				else {
-					test.log(LogStatus.FAIL, "save button is not displayed");
+					test.log(LogStatus.FAIL, "Cancel button is not displayed");
 				}
 				
 				if(ispresent(btn_Threshold_Save))	{
@@ -161,12 +175,19 @@ public class BusinessEntityMapping extends Baseclass	{
 				}
 			}
 			else	{
-				test.log(LogStatus.FAIL, "create button is not displayed");
+				test.log(LogStatus.FAIL, "create New version button is not displayed");
 			}
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -201,7 +222,14 @@ public class BusinessEntityMapping extends Baseclass	{
 				}	
 			}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -227,7 +255,14 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -254,7 +289,14 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -286,26 +328,32 @@ public class BusinessEntityMapping extends Baseclass	{
 			clickOn(drp_ParentMapping, "parenting mapping");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(drp_BLMapping, "BL mapping");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(drp_Weightage, "weightage");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(drp_BUHeadName, "BU HeadName");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(drp_BURiskOwnerName, "BU RiskOWnerName");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(drp_RiskChampionName, "BU Risk Champion Name");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
 			
 			clickOn(btn_Action_Add, "BU Action Add button");
 			Thread.sleep(2000);
@@ -314,8 +362,15 @@ public class BusinessEntityMapping extends Baseclass	{
 			Thread.sleep(2000);
 			
 		}
-		catch(Exception ex)	{
-			
+		catch(Exception ex) {
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -344,7 +399,14 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -366,7 +428,14 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -385,7 +454,14 @@ public class BusinessEntityMapping extends Baseclass	{
 			}
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	

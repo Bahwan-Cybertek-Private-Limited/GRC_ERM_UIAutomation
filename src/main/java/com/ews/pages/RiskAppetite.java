@@ -65,31 +65,31 @@ public class RiskAppetite extends Baseclass {
 			Thread.sleep(4000);
 			
 			if(ispresent(lbl_RiskAppetite)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskAppetite label is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskAppetite label is not displayed");
 			}
 			
 			if(ispresent(btn_ExportAs)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Export as is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Export as is not displayed");
 			}
 			
 			if(ispresent(btn_CreateRiskAppetite)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "CreateRiskAppetite button is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "CreateRiskAppetite button is not displayed");
 			}
 			
 			
 			List<WebElement> griddatacount = driver.findElements(By.xpath(list_grid));
 			
 			if(griddatacount.size() > 1) {
-				test.log(LogStatus.PASS, "RiskLibrary data is displayed");
+				test.log(LogStatus.PASS, "RiskLibrary grid data is displayed");
 			}
 			else {
 				test.log(LogStatus.INFO, "No records found in RiskLibrary grid");
@@ -99,7 +99,14 @@ public class RiskAppetite extends Baseclass {
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -119,60 +126,67 @@ public class RiskAppetite extends Baseclass {
 			Thread.sleep(4000);
 			
 			if(ispresent(table_AppetiteType)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskAppetitetype table is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskAppetitetype table is not displayed");
 			}
 			
 			if(ispresent(table_ReportingDate)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Reporting date table is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Reporting date table is not displayed");
 			}
 			
 			if(ispresent(table_RiskAppetiteCalculation)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskAppetiteCalculation table is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskAppetiteCalculation table is not displayed");
 			}
 			
 			if(ispresent(table_RiskAppetiteStatement)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskAppetiteStatement table is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskAppetiteStatement table is not displayed");
 			}
 			
 			if(ispresent(table_RiskId)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskID table is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskID table is not displayed");
 			}
 			
 			
 			if(ispresent(table_RiskType)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "RiskType is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "RiskType is not displayed");
 			}
 			
 			
 			if(ispresent(table_Year)) {
-				test.log(LogStatus.PASS, "RiskLibrary grid is displayed");
+				test.log(LogStatus.PASS, "Year is displayed");
 			}
 			else {
-				test.log(LogStatus.FAIL, "RiskLibrary grid is not displayed");
+				test.log(LogStatus.FAIL, "Year is not displayed");
 			}
 			
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -190,33 +204,40 @@ public class RiskAppetite extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRiskAppetite,"RiskAppetite tab");
+			clickOn(btn_CreateRiskAppetite,"Create RiskAppetite tab");
 			Thread.sleep(2000);
-			clickOn(rdo_selectType_Qualitative,"Appetite type");
+			clickOn(rdo_selectType_Qualitative,"select Type");
 			Thread.sleep(2000);
 			//keypress_Down(drp_RiskType);
 			Thread.sleep(2000);
-			clickOn(drp_ReportingYear,"RiskAppetite tab");
+			clickOn(drp_ReportingYear,"Reporting year");
 			Thread.sleep(2000);
 			keypress_Down();
-			clickOn(lnk_Cal,"RiskLibrary tab");
+			clickOn(lnk_Cal,"Calender link");
 			Thread.sleep(2000);
-			clickOn(lnk_cal_Today,"RiskLibrary tab");
+			clickOn(lnk_cal_Today,"Today link in calender");
 			Thread.sleep(2000);
 			//typeIn(drp_ReportingDate, "03/12/2022", "Reporting Date");
 			
-			clickOn(drp_RiskType,"RiskLibrary tab");
+			clickOn(drp_RiskType,"RiskType");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
 			
-			typeIn(txt_RiskStatement, "adsfasdf", "Reporting statement");
-			clickOn(btn_Create,"RiskAppetite tab");
+			typeIn(txt_RiskStatement, "adsfasdf", "Risk statement");
+			clickOn(btn_Create,"Create button");
 			Thread.sleep(2000);
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -234,33 +255,40 @@ public class RiskAppetite extends Baseclass {
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRiskAppetite,"RiskAppetite tab");
+			clickOn(btn_CreateRiskAppetite,"create RiskAppetite tab");
 			Thread.sleep(2000);
-			clickOn(rdo_selectType_Quantitative,"Appetite type");
+			clickOn(rdo_selectType_Quantitative,"select type");
 			Thread.sleep(2000);
 			//keypress_Down(drp_RiskType);
 			Thread.sleep(2000);
-			clickOn(drp_ReportingYear,"RiskAppetite tab");
+			clickOn(drp_ReportingYear,"Reporting year");
 			Thread.sleep(2000);
 			keypress_Down();
-			clickOn(lnk_Cal,"RiskLibrary tab");
+			clickOn(lnk_Cal,"Calender");
 			Thread.sleep(2000);
-			clickOn(lnk_cal_Today,"RiskLibrary tab");
+			clickOn(lnk_cal_Today,"Today button in calender");
 			Thread.sleep(2000);
 			//typeIn(drp_ReportingDate, "03/12/2022", "Reporting Date");
 			
-			clickOn(drp_RiskType,"RiskLibrary tab");
+			clickOn(drp_RiskType,"RiskTYpe");
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
 			
-			typeIn(txt_RiskStatement, "adsfasdf", "Reporting statement");
-			clickOn(btn_Create,"RiskAppetite tab");
+			typeIn(txt_RiskStatement, "adsfasdf", "Risk statement");
+			clickOn(btn_Create,"Create button");
 			Thread.sleep(2000);
 			
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
@@ -273,19 +301,26 @@ public class RiskAppetite extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(Module_MouseOver,"slide mouseover");
 			Thread.sleep(2000);
-			clickOn(lnk_RiskAppetite,"RiskLibrary tab");
+			clickOn(lnk_RiskAppetite,"lnk RiskAppetite tab");
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
 			
-			clickOn(btn_CreateRiskAppetite,"RiskLibrary tab");
+			clickOn(btn_CreateRiskAppetite,"Create RiskAppetite tab");
 			Thread.sleep(2000);
 			
 			clickOn(btn_Cancel,"RiskLibrary tab");
 			Thread.sleep(2000);
 		}
 		catch(Exception ex) {
-			
+			test.log(LogStatus.INFO,ex.toString());
+			try {
+				getScreenhot(driver, "Exception");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.log(LogStatus.FAIL,e.toString());
+			}
 		}
 	}
 	
