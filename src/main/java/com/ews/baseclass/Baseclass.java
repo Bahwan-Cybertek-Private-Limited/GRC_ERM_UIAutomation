@@ -9,6 +9,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -48,11 +49,12 @@ public class Baseclass extends ExtentReportListner{
 				
 				//WebDriver driver1;
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("start-maximized");
+				//options.addArguments("start-maximized");
 				
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
 				driver = new ChromeDriver(options); 
-				driver.manage().window().maximize();
+				//driver.manage().window().maximize();
+				driver.manage().window().setSize(new Dimension(1440, 900));
 				takeScreenhot(driver, "browser launch");
 			}
 			else if(browserName.equals("Firefox")){
