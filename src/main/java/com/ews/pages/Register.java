@@ -300,10 +300,13 @@ public class Register extends Baseclass {
 
 	public void fill_RiskRegisterData()	{
 		try	{
+			Thread.sleep(3000);
 			clickOn(drp_SelectSource,"selectsource");
+			takeScreenhot(driver, "Primary reason source");
 			Thread.sleep(2000);
 			keypress_Down();			
 			Thread.sleep(2000);
+			takeScreenhot(driver, "Primary reason source");
 			
 			clickOn(drp_DepartmentName,"DepartmentName");
 			Thread.sleep(2000);

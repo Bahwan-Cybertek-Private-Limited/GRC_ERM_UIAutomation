@@ -359,7 +359,7 @@ public class RiskLibrary extends Baseclass {
 			Thread.sleep(2000);
 			keypress_Down();
 			Thread.sleep(2000);
-			takeScreenhot(driver, "browser launch");
+			takeScreenhot(driver, "Primary reason source");
 			Thread.sleep(2000);
 			
 			clickOn(drp_RiskSecondarysource, "source");
