@@ -16,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -325,10 +326,10 @@ public class Baseclass extends ExtentReportListner{
 		
 		Boolean value = false;
 		try {
+			moveToElement(locator);
+			
 			Thread.sleep(2000);
-			//zoomOut();
-			//zoomIn();
-			Thread.sleep(2000);
+			
 			if(driver.findElement(By.xpath(locator)).isDisplayed())
 			{
 				value = true;
@@ -352,6 +353,17 @@ public class Baseclass extends ExtentReportListner{
 		return value;
 	}
 	
+	
+	public void moveToElement(String locator)	{
+		try	{
+			WebElement element = driver.findElement(By.id(locator));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+			Thread.sleep(2000); 
+		}
+		catch(Exception ex)	{
+			
+		}
+	}
 	
 public Boolean isDisabled(String locator) {
 		
