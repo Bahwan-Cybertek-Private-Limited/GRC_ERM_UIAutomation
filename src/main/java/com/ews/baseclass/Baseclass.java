@@ -266,7 +266,7 @@ public class Baseclass extends ExtentReportListner{
 			destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
-			test.log(LogStatus.PASS,"Screen " + source );
+			test.log(LogStatus.PASS,"Screen " + test.addScreenCapture(destination));
 		}
 		catch(Exception ex) {
 			System.out.println(ex);
@@ -295,7 +295,8 @@ public class Baseclass extends ExtentReportListner{
 			destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
-			test.log(LogStatus.PASS,"Screen " + source );
+			//test.log(LogStatus.PASS,"Screen " + source );
+			test.log(LogStatus.PASS,"Screen " + test.addScreenCapture(destination));
 		}
 		catch(Exception ex) {
 			System.out.println(ex);

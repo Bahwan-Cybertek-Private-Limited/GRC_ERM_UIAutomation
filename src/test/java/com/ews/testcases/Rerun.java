@@ -13,7 +13,26 @@ import utils.ExtentReportListner;
 public class Rerun extends Baseclass	{
 	
 	
+	 @Test(priority = 8) 
+	  public void riskLibrary_createSingleRisk() { 
+		  //launch browser
+		  browser_lunch("chrome");
+		  
+		  Login loginpage = new Login(); 
+		  loginpage.login();
+		  
+		  RiskLibrary lib = new RiskLibrary();
+		  lib.createSingleRisk();
+		  
+		  //logout 
+		  loginpage.logout();
+		  
+		  //close application and browser.. 
+		  closeBrower(); 
+		  
+	  }
 	  
+	 
 	  @Test(priority = 22) 
 	  public void register_CreateRiskUIValidations() { 
 		  //launch browser

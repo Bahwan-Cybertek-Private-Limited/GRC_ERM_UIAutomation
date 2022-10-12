@@ -325,10 +325,12 @@ public class RiskLibrary extends Baseclass {
 			Thread.sleep(2000);
 			clickOn(logo,"mouseover");
 			Thread.sleep(4000);
+			takeScreenhot(driver, "browser launch");
 			
 			clickOn(btn_CreateRisk,"button create RiskLibrary");
 			Thread.sleep(2000);
 			
+			takeScreenhot(driver, "browser launch");
 			clickOn(btn_SingleRisk,"button singleRisk");
 			Thread.sleep(2000);
 			
@@ -356,6 +358,8 @@ public class RiskLibrary extends Baseclass {
 			clickOn(drp_RiskPrimarysource, "Primary reason source");
 			Thread.sleep(2000);
 			keypress_Down();
+			Thread.sleep(2000);
+			takeScreenhot(driver, "browser launch");
 			Thread.sleep(2000);
 			
 			clickOn(drp_RiskSecondarysource, "source");
