@@ -1,7 +1,5 @@
 package com.ews.baseclass;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,6 +16,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,8 +47,11 @@ public class Baseclass extends ExtentReportListner{
 				//killProcessor();
 				
 				//WebDriver driver1;
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("start-maximized");
+				
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
-				driver = new ChromeDriver(); 
+				driver = new ChromeDriver(options); 
 				driver.manage().window().maximize();
 				takeScreenhot(driver, "browser launch");
 			}
