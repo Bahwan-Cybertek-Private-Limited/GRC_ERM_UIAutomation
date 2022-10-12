@@ -12,12 +12,14 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -468,11 +470,20 @@ public Boolean isDisabled(String locator) {
 	
 	public void keypress_Down() {
 		try {
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_DOWN);
-			robot.keyRelease(KeyEvent.VK_DOWN);
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
+			/*
+			 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_DOWN);
+			 * robot.keyRelease(KeyEvent.VK_DOWN); robot.keyPress(KeyEvent.VK_ENTER);
+			 * robot.keyRelease(KeyEvent.VK_ENTER);
+			 */
+			 
+			Actions actions = new Actions(driver);
+			/*
+			 * actions.keyDown(Keys.ARROW_DOWN); actions.keyDown(Keys.ENTER);
+			 * actions.keyUp(Keys.ARROW_DOWN); actions.keyUp(Keys.ENTER);
+			 */
+		        actions.sendKeys(Keys.ARROW_DOWN);
+		        actions.sendKeys(Keys.ENTER);
+		        actions.build().perform();
 			
 			
 		}
