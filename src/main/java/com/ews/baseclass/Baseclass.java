@@ -395,6 +395,13 @@ public Boolean isDisabled(String locator) {
 			}
 			else {
 				value = true;
+				clickOn(locator, "disabled button");
+				Thread.sleep(2000);
+				if(driver.findElement(By.xpath(locator)).isEnabled())
+				{
+					value = false;
+				}
+				
 			}
 			
 		}
