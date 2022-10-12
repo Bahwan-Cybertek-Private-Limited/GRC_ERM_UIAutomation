@@ -357,8 +357,16 @@ public class Baseclass extends ExtentReportListner{
 	public void moveToElement(String locator)	{
 		try	{
 			WebElement element = driver.findElement(By.id(locator));
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-			Thread.sleep(2000); 
+			/*
+			 * ((JavascriptExecutor)
+			 * driver).executeScript("arguments[0].scrollIntoView(true);", element);
+			 * Thread.sleep(2000);
+			 */
+			
+			  Actions actions = new Actions(driver); 
+			  actions.moveToElement(element);
+			  actions.build().perform();
+			  Thread.sleep(2000);
 		}
 		catch(Exception ex)	{
 			
