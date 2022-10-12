@@ -55,7 +55,7 @@ public class Baseclass extends ExtentReportListner{
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");	
 				driver = new ChromeDriver(options); 
 				//driver.manage().window().maximize();
-				driver.manage().window().setSize(new Dimension(1440, 900));
+				//driver.manage().window().setSize(new Dimension(1440, 900));
 				takeScreenhot(driver, "browser launch");
 			}
 			else if(browserName.equals("Firefox")){
@@ -326,23 +326,29 @@ public class Baseclass extends ExtentReportListner{
 		
 		Boolean value = false;
 		try {
-			moveToElement(locator);
+			//moveToElement(locator);
 			
 			Thread.sleep(2000);
 			
-			if(driver.findElement(By.xpath(locator)).isDisplayed())
-			{
-				value = true;
-			}
-			else {
-				value = false;
-			}
+			  if(!driver.findElements(By.xpath(locator)).isEmpty())	{
+				  value = true;
+			  }
+			  else {
+					value = false;
+				}
+			  
+			  
+				/*
+				 * if(driver.findElement(By.xpath(locator)).isDisplayed()) { value = true; }
+				 * else { value = false; }
+				 */
 			
 		}
 		catch(Exception ex) {
 			System.out.println(ex);
 			try {
 				getScreenhot(driver, "Exception");
+				test.log(LogStatus.FAIL,ex.toString());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -362,11 +368,13 @@ public class Baseclass extends ExtentReportListner{
 			 * driver).executeScript("arguments[0].scrollIntoView(true);", element);
 			 * Thread.sleep(2000);
 			 */
-			
-			  Actions actions = new Actions(driver); 
-			  actions.moveToElement(element);
-			  actions.build().perform();
-			  Thread.sleep(2000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("window.scrollBy(2000,0)");
+		    
+			/*
+			 * Actions actions = new Actions(driver); actions.moveToElement(element);
+			 * actions.build().perform(); Thread.sleep(2000);
+			 */
 		}
 		catch(Exception ex)	{
 			
